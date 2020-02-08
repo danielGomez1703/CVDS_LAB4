@@ -5,6 +5,8 @@
  */
 package hangman.model;
 
+import hangman.Exceptions.HangmanException;
+
 /**
  *
  * @author daniel.gomez-su
@@ -20,7 +22,7 @@ public class GameScore {
      * @return retorna el total de los puntos 
      * @pos el valor de los puntos obtenidos en el juego .
      */
-    public int calculateScore (int count , int incorrectCount){
+    public int calculateScore (int count , int incorrectCount) throws HangmanException{
         return 100;
     }
 }

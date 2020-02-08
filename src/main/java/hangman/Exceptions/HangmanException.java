@@ -13,7 +13,9 @@ public class HangmanException  extends Exception{
     
     public static final String COUNT_INCORRECTO = "EL PARAMETRO COUNT ES NEGATIVO";
     public static final String INCORRECTCOUNT_INCORRECTO = "EL PARAMETRO INCORRECTCOUNT ES NEGATIVO";
-    
+    public static final String PUNTAJE_MAXIMO ="EL PUNTAJE ESXCEDE LOS LIMITES";
+    public static final String PUNTAJE_MINIMO ="EL PUNTAJE ESXCEDE LOS LIMITES";
+
     public HangmanException(String mensaje){
         super(mensaje);
     }

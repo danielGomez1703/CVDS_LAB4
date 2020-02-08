@@ -9,6 +9,8 @@
 * Purpose: This class is the controller representation of the credits screen.
 * Facilitates communication between CreditsModel and CreditsView.
 * 
+* 
+* 
 ****************************************************************/
 package hangman.controller;
 

@@ -5,11 +5,13 @@
  */
 package hangman.model;
 
+import hangman.Exceptions.HangmanException;
+
 /**
  *
  * @author daniel.gomez-su
  */
-public class PowerScore extends GameScore{
+public class PowerScore extends GameScore {
     
     private int points = 0;
     
@@ -22,7 +24,12 @@ public class PowerScore extends GameScore{
      * @return retorna el total de los puntos 
      * @pos el valor de los puntos obtenidos en el juego .
      */
-    public int calculateScore (int count , int incorrectCount){
+    public int calculateScore (int count , int incorrectCount) throws HangmanException {
+        if ( count <0 ) 
+            throw (new HangmanException(HangmanException.COUNT_INCORRECTO)); // count < 0 
+        if ( incorrectCount <0 ) 
+            throw (new HangmanException(HangmanException.COUNT_INCORRECTO)); // incorrectcount < 0
+        
         if (points + java.lang.Math.pow(5,count) - (8*incorrectCount)<0 ){
             return 0;
         }else if (points + java.lang.Math.pow(5,count) - (8*incorrectCount) > 500 ){
