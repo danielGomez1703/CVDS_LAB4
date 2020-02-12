@@ -91,6 +91,28 @@ public class HangmanTest {
             Assert.assertTrue(true);
         }  
     }
+    
+    @Test
+    public void validateOriginalScoreInParam2 (){
+        try{
+            OriginalScore sc =new OriginalScore();
+            int resultado = sc.calculateScore(1,-3);  
+        }catch ( HangmanException e){
+            Assert.assertTrue(true);
+        }  
+    }
+    
+    @Test
+    public void validateOriginalScoreInParam3 (){
+        try{
+            OriginalScore sc =new OriginalScore();
+            int resultado = sc.calculateScore(-1,-3);  
+        }catch ( HangmanException e){
+            Assert.assertTrue(true);
+        }  
+    }
+    
+    
  /* -------------------------------------------------- BONUS SCORE ----------------------------------------------*/  
     @Test
     public void validateBonusScorecorrect (){
@@ -123,7 +145,27 @@ public class HangmanTest {
         }catch ( HangmanException e){
             Assert.assertTrue(true);
         }  
-    }  
+    }
+    
+    @Test
+    public void validateBonusScoreInParam2(){
+        try{
+            BonusScore sc =new BonusScore();
+            int resultado = sc.calculateScore(-11,6);  
+        }catch ( HangmanException e){
+            Assert.assertTrue(true);
+        }  
+    }
+    
+    @Test
+    public void validateBonusScoreInParam3(){
+        try{
+            BonusScore sc =new BonusScore();
+            int resultado = sc.calculateScore(11,-6);  
+        }catch ( HangmanException e){
+            Assert.assertTrue(true);
+        }  
+    }
     
     /* --------------------------- POWER SCORE ----------------------*/
        @Test
@@ -164,6 +206,24 @@ public class HangmanTest {
         try{
             PowerScore sc =new PowerScore();
             int resultado = sc.calculateScore(8,-11);  
+        }catch ( HangmanException e){
+            Assert.assertTrue(true);
+        }  
+    }
+    
+    public void validatePowerScoreInParam2 (){
+        try{
+            PowerScore sc =new PowerScore();
+            int resultado = sc.calculateScore(-8,11);  
+        }catch ( HangmanException e){
+            Assert.assertTrue(true);
+        }  
+    }
+    
+    public void validatePowerScoreInParam3 (){
+        try{
+            PowerScore sc =new PowerScore();
+            int resultado = sc.calculateScore(-8,-11);  
         }catch ( HangmanException e){
             Assert.assertTrue(true);
         }  
