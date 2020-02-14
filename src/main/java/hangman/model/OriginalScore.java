@@ -11,7 +11,8 @@ import hangman.Exceptions.HangmanException;
  *
  * @author daniel.gomez-su
  */
-public class OriginalScore extends GameScore{
+public class OriginalScore implements GameScore{
+    private int points =100;
     
     @Override 
       /**
@@ -29,10 +30,10 @@ public class OriginalScore extends GameScore{
         if ( incorrectCount <0 ) 
             throw (new HangmanException(HangmanException.COUNT_INCORRECTO)); // incorrectcount < 0
         
-        if (super.points - (10*incorrectCount)<0 ){
+        if (points - (10*incorrectCount)<0 ){
             return 0;
         }
-        return super.points - (10*incorrectCount);
+        return points - (10*incorrectCount);
     }
     
 }

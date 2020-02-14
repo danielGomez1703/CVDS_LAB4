@@ -11,7 +11,7 @@ import hangman.Exceptions.HangmanException;
  *
  * @author daniel.gomez-su
  */
-public class PowerScore extends GameScore {
+public class PowerScore implements GameScore {
     
     private int points = 0;
     
